@@ -4,35 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin test site</title>
+    <link rel="stylesheet" type=“text/css” href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<style>
+    :root {--lighttext:#F9FAF8;
+    --darktext:#1f2937;
+    --useblue:#3882F6}
+
+p, h2 {margin:0;}
+*{
+    font-family: "Roboto", sans-serif;
+    color:var(--lighttext);
+  }
+
+body {
+    background-color:#1F2937;
+}
+#hero {font-size:48px;font-weight: 900;}
+.smalltext {font-size:18px; color:#E5E7EB;text-align: right;}
+.headerlogotext {font-size: 24px;}
+.button {background-color:var(--useblue);border-radius:5px;width:fit-content;padding:2.5px 5px;margin-top:10px;}
+.button2 {background-color:var(--useblue);border-radius:5px;width:fit-content;padding:5px 10px;border:2px solid white;height:fit-content; place-self: center;}
+.info-header{color:var(--darktext);background-color: var(--lighttext);padding-bottom:5%;}
+.info-header p{font-size: 36px; font-weight: 900; color:var(--darktext);background-color: var(--lighttext);text-align: center;padding:5% 0}
+.info-header div{color:var(--darktext);background-color: var(--lighttext);text-align: center;display:grid;grid-template-columns: auto auto auto auto;place-items:center;}
+.flex {display:grid;grid-template-columns: 1fr 1fr;margin:0 10%}
+.flex img{place-self: center;background-color:grey;}
+.images {gap:20px;width:80%;margin:auto;}
+.images img {width: 100px;place-self: center;border-radius: 10px;aspect-ratio: 1/1;border: 2px solid var(--useblue);}
+.images div {grid-template-columns: 1fr;width:min-content;}
+.quote {background-color: #E5E7EB;font-size:36px;font-style: italic;padding:5% 25%}
+.quote div{color:var(--darktext);}
+#signed {text-align: right;font-size:18px;font-weight:900;}
+.wrapper {display:grid;gap:20px}
+#footer {text-align: center;padding:5%;}
+.CTA {background-color: var(--lighttext);text-align: center;padding:10%;}
+.CTA .button {margin:auto;text-align: left;display:grid;grid-template-columns: auto auto;gap:20px;padding:10%;width:80%;}
+#image-holder{background-color: gray;}
+#header {min-height:100px;}
+.top {padding-bottom:5%;gap:20px;}
+#internal{font-weight:300;padding:20px;}
+#subtext {font-size:18px;}
+</style>
+
+
 </head>
 <body>
-    <div>Header Logo
-        header link one
+    <div class="wrapper">
+    <div class="flex" id="header">
+    <div class="headerlogotext">Header Logo</div>
+        <div class="smalltext">header link one
         header link two
-        header link three
+        header link three</div>
     </div>
-    <div>This website is awesome
-        This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.
-        Sign up
-        this is a placeholder for an image
+    <div class="flex top"><div><div id="hero">This website is awesome</div>
+    <div id="subtext">
+        This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</div>
+        <p class="button">
+        Sign up</p></div>
+        <div id="image-holder"><img src="" alt="this is a placeholder for an image"></div>
     </div>
-    <div>Some random information.
-        Image
-        this is some subtext under an illustration or image
-        Image
-        this is some subtext under an illustration or image
-        Image
-        this is some subtext under an illustration or image
-        Image
-        this is some subtext under an illustration or image
+
+<div>
+    <div class="info-header">
+        <p>Some random information.</p>
+        <div class="images">
+        <div>
+            <img src="" alt="alt">
+            this is some subtext under an illustration or image</div><div>
+                <img src="" alt="alt">
+                this is some subtext under an illustration or image</div><div>
+                    <img src="" alt="alt">
+                    this is some subtext under an illustration or image</div><div>
+                        <img src="" alt="alt">
+                        this is some subtext under an illustration or image</div></div>
     </div>
-    <div>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.
-        -Thor, God of Thunder
+    <div class="quote">
+        <div id="internal">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</div>
+        <div id="signed">-Thor, God of Thunder</div>
     </div>
-    <div> Call to action! It's time!
-        Sign up for our product by clicking that button right over there!
-        Sign up
-    </div>
-    <div> Copyright &#169; The Odin Project 2021</div>
+    <div class="CTA"> 
+        <div class="button">
+           <div> <h2>Call to action! It's time!</h2>
+            <p>Sign up for our product by clicking that button right over there!</p></div>
+        <div class="button2">Sign up</div>
+    </div></div></div>
+    <div id="footer"> Copyright &#169; The Odin Project 2021</div></div>
 </body>
 </html>
